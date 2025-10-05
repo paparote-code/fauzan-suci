@@ -1,0 +1,67 @@
+.simply-countdown {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: auto;
+}
+
+/* Circular countdown sections */
+.simply-countdown > .simply-section {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column; /* number on top, label below */
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #000000;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.simply-countdown > .simply-section:hover {
+  transform: scale(1.05);
+}
+
+/* Number style */
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Label style (days, hours, minutes, seconds) */
+.simply-countdown > .simply-section .simply-word {
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  .simply-countdown > .simply-section {
+    width: 65px;
+    height: 65px;
+  }
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 1.3rem;
+  }
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .simply-countdown > .simply-section {
+    width: 65px;
+    height: 66px;
+  }
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 2rem;
+  }
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 1.2rem;
+  }
+}
